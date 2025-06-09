@@ -25,14 +25,15 @@ function App() {
   }
 
   useEffect(() => {
-    try{
+    
       fetch(`https://countries-search-data-prod-812920491762.asia-south1.run.app/countries`)
       .then((response) => response.json())
-      .then((data) => setCountries(data));
-    }
-    catch(e){
-      console.error("Error fethcing data");
-    }
+      .then((data) => setCountries(data))
+      .catch((e) => {
+        console.error(e);
+      })
+    
+
   }, [])
 
   return (
