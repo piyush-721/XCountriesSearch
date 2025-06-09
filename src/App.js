@@ -31,7 +31,7 @@ function App() {
       .then((data) => setCountries(data));
     }
     catch(e){
-      console.log(e);
+      console.error("Error fethcing data");
     }
   }, [])
 
