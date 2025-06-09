@@ -30,10 +30,9 @@ function App() {
       .then((response) => response.json())
       .then((data) => setCountries(data))
       .catch((e) => {
-        console.error(e);
+        console.error("Error fetching data", e);
       })
-    
-
+  
   }, [])
 
   return (
